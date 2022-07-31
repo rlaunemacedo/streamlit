@@ -40,6 +40,6 @@ else:
 
 dfshow = df.groupby(by = ['date']).sum()
 
-fig = px.line(dfshow,x=dfshow.index,y=dfshow.num_sequences)
+fig = px.line(dfshow,x=dfshow.index,y=dfshow.num_sequences,color='location',line_shape="spline")
 fig.update_layout(title='Casos diários de covid-19' )
 st.plotly_chart(fig,use_container_width=True)
